@@ -1,0 +1,70 @@
+MIT License
+
+Copyright (c) 2024 MaTriXy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+
+THIRD-PARTY ASSETS AND ATTRIBUTIONS
+
+This project includes assets and resources from third parties that are subject
+to their own licenses and terms:
+
+1. GOOGLE APP ICONS (Used in Drag Transform Experiment)
+   - Icons: Gmail, Google Maps, Google Photos, and other Google app icons
+   - Copyright: © Google LLC - All rights reserved
+   - Source: https://play.google.com/store/apps/dev?id=5700313618786177705
+   - License: Proprietary to Google LLC
+   
+   IMPORTANT DISCLAIMER: The Google app icons used in the "Drag Transform" 
+   experiment are the property of Google LLC. These icons are used solely for 
+   demonstration and educational purposes. No ownership, affiliation, or rights 
+   are claimed over these assets. These icons may not be used for any commercial 
+   purpose without explicit permission from Google LLC.
+
+2. OCEAN BACKGROUND IMAGE
+   - Photo by Shifaaz shamoon on Unsplash
+   - Source: https://unsplash.com/photos/ocean-wave-photography-oR0uERTVyD0
+   - License: Unsplash License
+   
+3. MATERIAL ICONS
+   - Copyright: Google LLC
+   - Source: https://fonts.google.com/icons
+   - License: Apache License 2.0
+
+4. MATERIAL DESIGN 3 ICONS
+   - Copyright: Google LLC  
+   - Source: https://m3.material.io/styles/icons/overview
+   - License: Apache License 2.0
+
+For a complete list of third-party assets and their attributions, please refer
+to the in-app credits section (Menu > Open Source Licenses > Asset Credits) or
+the credits.json file located at: app/src/main/assets/credits.json
+
+================================================================================
+
+DEPENDENCIES
+
+This project uses various open-source libraries. For a complete list of 
+dependencies and their licenses, please refer to:
+- The in-app licenses screen (Menu > Open Source Licenses)
+- The app/build.gradle.kts file for dependency declarations
+
+All third-party libraries are used in accordance with their respective licenses.
