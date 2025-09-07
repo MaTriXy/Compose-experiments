@@ -1,0 +1,87 @@
+# Fastlane configuration for local testing and deployment
+
+default_platform(:android)
+
+platform :android do
+  desc "Build a debug APK"
+  lane :debug do
+    gradle(task: "assembleDebug")
+  end
+
+  desc "Build a release bundle"
+  lane :build_release do
+    gradle(
+      task: "bundle",
+      build_type: "Release",
+      properties: {
+        "versionCode" => ENV["VERSION_CODE"] || 1,
+        "versionName" => ENV["VERSION_NAME"] || "1.0.0"
+      }
+    )
+  end
+
+  desc "Deploy to internal testing track"
+  lane :deploy_internal do
+    build_release
+    upload_to_play_store(
+      track: 'internal',
+      release_status: 'completed',
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  desc "Deploy to beta track"
+  lane :deploy_beta do
+    build_release
+    upload_to_play_store(
+      track: 'beta',
+      release_status: 'completed',
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  desc "Deploy to production"
+  lane :deploy_production do
+    build_release
+    upload_to_play_store(
+      track: 'production',
+      release_status: 'completed',
+      skip_upload_apk: true,
+      skip_upload_metadata: false,
+      skip_upload_images: false,
+      skip_upload_screenshots: false
+    )
+  end
+
+  desc "Promote from internal to beta"
+  lane :promote_to_beta do
+    upload_to_play_store(
+      track: 'internal',
+      track_promote_to: 'beta',
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  desc "Promote from beta to production"
+  lane :promote_to_production do
+    upload_to_play_store(
+      track: 'beta',
+      track_promote_to: 'production',
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+end

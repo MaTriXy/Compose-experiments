@@ -84,3 +84,19 @@ artifacts/
 # Claude files
 CLAUDE.md 
 .claude/
+
+# Signing and deployment
+keystore.properties
+play-service-account.json
+release-keystore.jks
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/readme.md
+
+# Release builds
+app/release/
+app/debug/
