@@ -35,22 +35,29 @@ This repository contains Jetpack Compose implementations of SwiftUI experiments.
 ./gradlew connectedAndroidTest
 ```
 
-## Implemented Experiments (7 Total) ✅
+## Implemented Experiments (8 Total) ✅
 
 ### Visual Effects & Animation
-- **✅ Blob Animation**: Interactive liquid metal blob with realistic physics and pressure-sensitive touch
-- **✅ Colorful Glow**: Subtle large-area glow effects that follow drag gestures with soft color transitions
-- **✅ Shapes**: Drag around to see random shapes generated that vary in shape type, color and size
+- **✅ Blob Animation** (Advanced): Interactive liquid metal animation with pressure-sensitive touch, dynamic color gradients, and ripple effects
+- **✅ Colorful Glow** (Intermediate): Drag around to see a colorful glow that changes in shape and color
+- **✅ Shapes** (Beginner): Drag around to see random shapes generated that vary in shape type, color and size
 
 ### Gesture-Based Interactions
-- **✅ Drag Transform**: Draggable dock with app icon rearrangement and edit mode
-- **✅ Drag to Delete**: Multiple draggable app icons with proximity-based deletion and smart auto-replenishment
+- **✅ Drag Transform** (Intermediate): A prototype that shows an interaction on how to re-arrange your iOS navigation
+- **✅ Drag to Delete** (Beginner): A prototype that shows a drag to delete interaction
 
 ### Interactive Elements
-- **✅ Bouncy Grid**: A grid of animated lines that dynamically bends and bounces in response to gestures
+- **✅ Bouncy Grid** (Intermediate): A grid of animated lines dynamically bends and bounces in response to gestures
 
 ### Data Visualization
-- **✅ Calculator Metric**: Unit conversion interface with temperature, weight, and distance conversions
+- **✅ Calculator Metric** (Beginner): A prototype that converts numbers to the metric system
+
+### Particle Systems
+- **✅ Particle Text** (Advanced): Animated particles that assemble into text with touch explosion effects and an animated gradient button
+  - Reusable `ParticleText` composable with full customization
+  - Configurable particle size, spacing, color, and animation speed
+  - Touch-to-explode interaction with force-based physics
+  - Automatic particle reassembly after explosion
 
 ## Features
 
