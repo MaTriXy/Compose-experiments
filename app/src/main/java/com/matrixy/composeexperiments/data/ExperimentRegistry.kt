@@ -9,6 +9,7 @@ import com.matrixy.composeexperiments.experiments.calculator_metric.CalculatorMe
 import com.matrixy.composeexperiments.experiments.colorful_glow.ColorfulGlowExperimentContent
 import com.matrixy.composeexperiments.experiments.drag_to_delete.DragToDeleteExperimentContent
 import com.matrixy.composeexperiments.experiments.drag_transform.DragTransformExperimentContent
+import com.matrixy.composeexperiments.experiments.particle_text.ParticleTextExperimentContent
 
 enum class ExperimentCategory(val displayName: String) {
     VISUAL_EFFECTS("Visual Effects & Animation"),
@@ -157,6 +158,17 @@ object ExperimentRegistry {
             tags = listOf("calculator", "metric", "conversion", "numbers"),
             swiftUIReference = "calculator metric"
         ))
+
+        // Particle Systems
+        register(createExperiment(
+            id = "particle_text",
+            displayName = "Particle Text",
+            description = "Animated particles that assemble into text with touch explosion effects and an animated gradient button",
+            category = ExperimentCategory.PARTICLE_SYSTEMS,
+            difficulty = ExperimentDifficulty.ADVANCED,
+            tags = listOf("particles", "text", "animation", "explosion", "canvas", "gradient"),
+            swiftUIReference = "particle text"
+        ))
     }
     
     private fun createExperiment(
@@ -187,6 +199,7 @@ object ExperimentRegistry {
             "colorful_glow" -> ColorfulGlowExperimentContent()
             "drag_to_delete" -> DragToDeleteExperimentContent()
             "drag_transform" -> DragTransformExperimentContent()
+            "particle_text" -> ParticleTextExperimentContent()
             else -> error("Unknown experiment: $id")
         }
         

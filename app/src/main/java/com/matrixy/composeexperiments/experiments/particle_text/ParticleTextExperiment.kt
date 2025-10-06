@@ -19,13 +19,9 @@ import com.matrixy.composeexperiments.ui.components.ExperimentPlaceholder
  * - Smooth particle physics and text reformation
  */
 class ParticleTextExperimentContent : ExperimentContent {
-    
+
     @Composable
     override fun Content(modifier: Modifier) {
-        ExperimentPlaceholder(
-            title = "Particle Text",
-            description = "A text built with particles that you can interact with and an animated gradient button",
-            modifier = modifier
-        )
+        ParticleTextScreen()
     }
 }
